@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive layout</title>
+</head>
+<style>
+     h1{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: larger;
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+     }
+    .item {
+        /* border:1px solid red; */
+        padding: 5px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        border-radius: 5px;
+        cursor: pointer;
+
+    }
+
+    .item>img {
+        width: 300px;
+        border-radius: 10px;
+
+        /* border:1px solid green */
+    }
+
+    #container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        border: 1px dashed;
+        padding: 10px;
+
+    }
+
+    .item p {
+        border: 1px dashed rgb(230, 26, 26);
+        padding: 10px;
+        margin-left: 100px;
+        width: 80px;
+        background-color: pink;
+        border-radius: 10px;
+    }
+
+
+    @media screen and (min-width:350px) and (max-width:500px) {
+
+        .item {
+            grid-column: span 7;
+
+
+        }
+
+        .item>img {
+            width: 100%;
+            padding-bottom: 5px;
+
+        }
+
+        .item p {
+            margin: auto;
+            padding: 8px;
+        }
+
+    }
+
+    @media screen and (min-width:501px) and (max-width:800px) {
+
+
+        .item {
+            grid-column: span 2;
+
+
+        }
+
+        .item>img {
+            width: 100%;
+            padding-bottom: 5px;
+        }
+
+        .item p {
+            margin: auto;
+            padding: 8px;
+        }
+
+    }
+</style>
+
+<body>
+    <h1>- OFFER -</h1>
+
+    <div id="container">
+        <div class="item">
+            <img src="https://images.sugarcosmetics.com/Promotion/5b050f83-b466-416b-89ce-f179462ac8f0.jpg" alt="">
+            <p>PRIMER999</p>
+        </div>
+        <div class="item">
+            <img src="https://d32baadbbpueqt.cloudfront.net/Promotion/0844a8f6-78e3-429d-b352-4e020f447004.jpg" alt="">
+            <p>GIFT799</p>
+        </div>
+        <div class="item">
+            <img src="https://images.sugarcosmetics.com/Promotion/9b51e68a-a374-408a-ad3b-7d521346dc13.jpg" alt="">
+            <p>COUPON149</p>
+        </div>
+        <div class="item">
+            <img src="https://images.sugarcosmetics.com/Promotion/5dacc47b-0505-4fa2-9ea3-d3e3b88d3f50.jpg" alt="">
+            <p>COUPON14</p>
+        </div>
+        <div class="item">
+            <img src="https://images.sugarcosmetics.com/Promotion/7ee374a2-db58-4159-83c5-d8b2b02579cd.jpg" alt="">
+            <p>GIVA2499</p>
+        </div>
+        <div class="item">
+            <img src="https://images.sugarcosmetics.com/Promotion/63b782a7-3a1f-4424-953d-372cb8a9cca7.jpg" alt="">
+            <p>SHINE999</p>
+        </div>
+        <div class="item">
+            <img src="https://images.sugarcosmetics.com/Promotion/57689980-4832-408a-b43e-593fe85dde39.jpg" alt="">
+            <p>COUPON25</p>
+        </div>
+    </div>
+</body>
+
+</html>
